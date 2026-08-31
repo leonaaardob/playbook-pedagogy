@@ -56,7 +56,9 @@ Un constat canonique n’est pas une proposition : il est présenté comme tel e
 
 **Information propre au cours 01, non généralisable.** La composition exacte de l’équipe, les modèles, efforts, identifiants d’agents, états détaillés du registre et protocole de relance sont des mécanismes opérationnels documentés pour le cours 01. Ils ne deviennent pas une gouvernance de plateforme sans décision dédiée.
 
-## 3. Quatre sujets restant ouverts
+## 3. Arbitrages historiques, désormais validés
+
+Les quatre arbitrages ci-dessous sont désormais validés et font foi dans le [registre de décisions](../decisions/REGISTRE-DECISIONS-PEDAGOGIQUES-PLATEFORME.md). Les alternatives et mentions « Proposition à arbitrer » sont conservées ici comme contexte de préparation ; elles ne désignent plus de décision ouverte.
 
 ### A. Noyau obligatoire des formats
 
@@ -126,14 +128,16 @@ Les formulations suivantes font partie de la proposition et doivent être conser
 
 Ces formulations précisent le socle déjà décrit : les accès apprenants passent par le proxy sécurisé, les validations peuvent utiliser un stub déterministe sans clé, le concept durable, le contenu maintenu et le Field Note datée ont des régimes distincts, la rédaction publiée est en français avec tutoiement et définitions à l’usage, et les variantes de code sont contrôlées à parité stricte.
 
-## 5. Décisions attendues, limitées à quatre
+## 5. Décisions enregistrées
+
+Le [registre de décisions](../decisions/REGISTRE-DECISIONS-PEDAGOGIQUES-PLATEFORME.md) porte la formulation validée des quatre familles suivantes.
 
 1. Noyau obligatoire des formats pédagogiques
 2. Politique d’évaluation non déterministe
 3. Portée fournisseur et conditions de parité entre variantes
 4. Niveau et déclencheurs de revue humaine
 
-Toutes les autres informations de cette note sont soit des invariants explicitement fondés sur les références, soit des éléments propres au cours 01 et non généralisables. Elles ne constituent pas des arbitrages ouverts dans cette version.
+Toutes les autres informations de cette note sont soit des invariants explicitement fondés sur les références, soit des éléments propres au cours 01 et non généralisables. Aucun nouvel arbitrage n’est ouvert dans cette version.
 
 ## 6. Références canoniques utilisées
 
