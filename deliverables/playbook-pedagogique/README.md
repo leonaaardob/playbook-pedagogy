@@ -36,7 +36,7 @@ Ces sources sont complémentaires : les références établissent le contexte ca
 2. le concept durable et le présent playbook pour les règles consolidées
 3. les références canoniques pour les frontières et processus explicitement établis
 4. les documents propres à un cours pour leur application locale
-5. les fil note daté pour leur contexte éditorial daté
+5. les fil note datée pour leur contexte éditorial daté
 
 `legacy/` est explicitement exclu des sources de vérité et ne sert pas à produire, arbitrer ou valider le contenu du playbook.
 
