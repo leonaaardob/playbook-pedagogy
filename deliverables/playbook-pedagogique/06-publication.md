@@ -10,5 +10,4 @@ La traçabilité est bidirectionnelle : la projection référence la source vali
 
 ## Revue humaine
 
-Une revue humaine est obligatoire avant la publication d’un nouveau cours et pour tout changement touchant les objectifs, évaluations, sécurité, fournisseurs ou certification. En production, elle est escaladée en cas d’ambiguïté, d’échec répété, de désaccord entre contrôles ou de risque apprenant.
-
+Une revue humaine est obligatoire avant la publication d’un nouveau cours et pour tout changement touchant les objectifs, évaluations, sécurité, fournisseurs ou certification. Elle n’est pas indistinctement obligatoire pour toute publication courante. En production, elle est escaladée en cas d’ambiguïté, d’échec répété, de désaccord entre contrôles ou de risque apprenant.

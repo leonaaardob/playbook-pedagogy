@@ -10,9 +10,8 @@ Chaque format décrit sa finalité, ses entrées, son déroulé, l’artefact pr
 
 ## Formats optionnels
 
-Un format supplémentaire est autorisé seulement si le noyau est insuffisant, si un risque spécifique le justifie ou si le parcours doit transférer davantage d’autonomie. La justification est enregistrée avec le format.
+Le noyau est obligatoire et ne peut pas être omis. Un format supplémentaire est autorisé seulement s’il complète le noyau pour traiter un risque spécifique ou transférer davantage d’autonomie. La justification est enregistrée avec le format.
 
 ## Fiche de micro-leçon
 
 Une fiche contient l’objectif, les prérequis, l’idée unique, l’artefact produit et le lien avec la preuve finale. La leçon détaillée vient après validation de toutes les fiches nécessaires.
-
