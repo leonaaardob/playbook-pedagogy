@@ -2,7 +2,7 @@
 
 ## Maintenance
 
-Le contenu maintenu possède un propriétaire, un statut, une date de dernière revue et une condition de réexamen. Le concept durable évolue seulement par décision explicite. Le Fil note daté conserve un contexte éditorial ponctuel sans fonder la doctrine.
+Le contenu maintenu possède un propriétaire, un statut, une date de dernière revue et une condition de réexamen. Le concept durable évolue seulement par décision explicite. Le Field Note datée conserve un contexte éditorial ponctuel sans fonder la doctrine.
 
 ## Cycle de changement
 
