@@ -1,7 +1,7 @@
 # Guide de structure des playbooks IA
 
-**Statut : guide structurel, pas doctrine ni playbook final**  
-**Source analysée :** dépôt privé `playbooks/ia/`  
+**Statut : guide structurel, pas doctrine ni playbook final**
+**Source analysée :** dépôt privé `playbooks/ia/`
 **Règle :** ce document décrit les formes récurrentes, pas le contenu métier des playbooks analysés.
 
 ## 1. Fonction du guide
@@ -251,4 +251,3 @@ Ce guide n’est pas :
 ## 14. Base d’observation
 
 La structure a été comparée dans les familles de playbooks du dossier `ia/`, notamment leurs entrées `README`, fichiers `00-canon`, `01-preflight`, `02-build-order`, fichiers de domaine, failure modes, opérations, bridges, glossaires, index de checklists et index de templates. Les noms et contenus spécifiques restent dans le dépôt source et ne sont pas recopiés ici.
-
