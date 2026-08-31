@@ -8,7 +8,7 @@ La plateforme sépare l’atelier éditorial, le contenu validé et la projectio
 
 - **concept durable** : principes et contrats stables, destinés à survivre aux cycles
 - **contenu maintenu** : contenu validé et publié, avec propriétaire, statut, date de revue et condition de réexamen
-- **fil note datée** : contenu éditorial daté, non fondateur, et non journal chronologique de doctrine
+- **fil note daté** : contenu éditorial daté, non fondateur, et non journal chronologique de doctrine
 
 Aucun régime ne se promeut implicitement dans un autre.
 
