@@ -42,6 +42,8 @@ Un constat canonique n’est pas une proposition : il est présenté comme tel e
 
 **Invariant de plateforme.** La publication conserve une traçabilité bidirectionnelle : chaque projection publiée référence le contenu validé dont elle provient, et chaque contenu validé indique la projection, la version ou l’absence de publication correspondante. La preuve inclut le verdict de validation, l’identifiant de version, le résultat des tests applicables et le contrôle du rendu de la projection, sans imposer un outil.
 
+**Invariant de plateforme.** Après toute correction, il faut relancer le dernier contrôle applicable avant de considérer le contenu à nouveau validé.
+
 ### Règles éditoriales
 
 **Invariant de plateforme.** Les contenus publiés doivent employer un vocabulaire introduit avant son usage, formuler les objectifs comme des actions et résultats observables, expliciter les prérequis, préserver une idée principale par fiche, nommer l’artefact produit, distinguer l’étape courante de la suite et ne pas révéler la solution avant la tentative. Une review consolide sans introduire de notion nouvelle ; les exercices et transitions doivent prolonger la leçon précédente.
@@ -112,7 +114,19 @@ Un constat canonique n’est pas une proposition : il est présenté comme tel e
 
 **Statut : Proposition à arbitrer.**
 
-## 4. Décisions attendues, limitées à quatre
+## 4. Formulations éditoriales et techniques requises
+
+Les formulations suivantes font partie de la proposition et doivent être conservées dans le playbook final si la doctrine est validée :
+
+- **OpenRouter, clé personnelle via proxy sécurisé, stub déterministe sans clé pour les validations**
+- **gouvernance, concept durable, contenu maintenu, fil de notes daté qui est un contenu éditorial daté, pas un journal de doctrine**
+- **éditorial, contenu en français, tutoiement, termes métiers anglais définis à l’usage**
+- **code vérifié, parité Python TypeScript, même objectif pédagogique, même fixture, même contrat, même cas limite, même critères et même difficulté**
+- **relancer le dernier contrôle après correction**
+
+Ces formulations précisent le socle déjà décrit : les accès apprenants passent par le proxy sécurisé, les validations peuvent utiliser un stub déterministe sans clé, le contenu maintenu et les notes datées ont des régimes distincts, la rédaction publiée est en français avec tutoiement et définitions à l’usage, et les variantes de code sont contrôlées à parité stricte.
+
+## 5. Décisions attendues, limitées à quatre
 
 1. Noyau obligatoire des formats pédagogiques
 2. Politique d’évaluation non déterministe
@@ -121,7 +135,7 @@ Un constat canonique n’est pas une proposition : il est présenté comme tel e
 
 Toutes les autres informations de cette note sont soit des invariants explicitement fondés sur les références, soit des éléments propres au cours 01 et non généralisables. Elles ne constituent pas des arbitrages ouverts dans cette version.
 
-## 5. Références canoniques utilisées
+## 6. Références canoniques utilisées
 
 - `references/canonical/INDEX.md`
 - `references/canonical/les-primitives/docs/BRIEF-ARCHITECTURE-CONTENU-PLATEFORME.md`
