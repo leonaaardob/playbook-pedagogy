@@ -20,7 +20,7 @@ Un constat canonique n’est pas une proposition : il est présenté comme tel e
 
 **Invariant de plateforme.** Un contenu suit une chaîne distincte de cadrage, production, vérification, revue pédagogique, puis publication explicite. Les références canoniques ne permettent pas encore de fixer un outil ou un format unique de traçabilité.
 
-**Invariant de plateforme.** La doctrine distingue trois régimes : le **concept durable**, formulation stable des principes et contrats pédagogiques destinée à survivre aux cycles de production ; le **contenu maintenu**, contenu validé et publié qui possède un propriétaire, un statut, une date de dernière revue et une prochaine condition de réexamen ; et le **Fil note daté**, contenu éditorial daté, non fondateur, qui documente un contexte, une décision ou une évolution ponctuelle, mais n’est pas un journal chronologique de doctrine. Aucun régime ne peut être promu implicitement dans un autre.
+**Invariant de plateforme.** La doctrine distingue trois régimes : le **concept durable**, formulation stable des principes et contrats pédagogiques destinée à survivre aux cycles de production ; le **contenu maintenu**, contenu validé et publié qui possède un propriétaire, un statut, une date de dernière revue et une prochaine condition de réexamen ; et le **Field Note datée**, contenu éditorial daté, non fondateur, qui documente un contexte, une décision ou une évolution ponctuelle, mais n’est pas un journal chronologique de doctrine. Aucun régime ne peut être promu implicitement dans un autre.
 
 ### Conception et contrat minimal
 
@@ -119,12 +119,12 @@ Un constat canonique n’est pas une proposition : il est présenté comme tel e
 Les formulations suivantes font partie de la proposition et doivent être conservées dans le playbook final si la doctrine est validée :
 
 - **OpenRouter, clé personnelle via proxy sécurisé, stub déterministe sans clé pour les validations**
-- **gouvernance, concept durable, contenu maintenu, Fil note daté qui est un contenu éditorial daté, pas un journal de doctrine**
+- **gouvernance, concept durable, contenu maintenu, Field Note datée qui est un contenu éditorial daté, pas un journal de doctrine**
 - **éditorial, contenu en français, tutoiement, termes métiers anglais définis à l’usage**
 - **code vérifié, parité Python TypeScript, même objectif pédagogique, même fixture, même contrat, même cas limite, même critères et même difficulté**
 - **relancer le dernier contrôle après correction**
 
-Ces formulations précisent le socle déjà décrit : les accès apprenants passent par le proxy sécurisé, les validations peuvent utiliser un stub déterministe sans clé, le concept durable, le contenu maintenu et le Fil note daté ont des régimes distincts, la rédaction publiée est en français avec tutoiement et définitions à l’usage, et les variantes de code sont contrôlées à parité stricte.
+Ces formulations précisent le socle déjà décrit : les accès apprenants passent par le proxy sécurisé, les validations peuvent utiliser un stub déterministe sans clé, le concept durable, le contenu maintenu et le Field Note datée ont des régimes distincts, la rédaction publiée est en français avec tutoiement et définitions à l’usage, et les variantes de code sont contrôlées à parité stricte.
 
 ## 5. Décisions attendues, limitées à quatre
 
