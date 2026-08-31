@@ -1,214 +1,254 @@
-# Guide de structure du playbook IA
+# Guide de structure des playbooks IA
 
-**Statut : guide de structure, pas le playbook final**  
-**Rôle :** définir l’ordre, les sections et les contrats du futur playbook  
-**Source de structure :** playbooks IA archivés dans `legacy/`  
-**Règle de contenu :** les décisions de fond proviennent de la proposition pédagogique validée et du registre de décisions
+**Statut : guide structurel, pas doctrine ni playbook final**  
+**Source analysée :** dépôt privé `playbooks/ia/`  
+**Règle :** ce document décrit les formes récurrentes, pas le contenu métier des playbooks analysés.
 
-## 1. Cadre d’utilisation
+## 1. Fonction du guide
 
-Le playbook final doit être lisible par un agent qui découvre le dépôt. Il doit permettre de répondre rapidement à quatre questions :
+Un playbook IA est un système documentaire opérable par un agent qui découvre le dépôt. Sa structure doit permettre de :
 
-1. Quel est le périmètre du playbook ?
-2. Quelle structure un contenu doit-il respecter ?
-3. Comment le contenu est-il vérifié et publié ?
-4. Que faire lorsqu’une règle, une variante ou un cas limite n’est pas couvert ?
+- savoir quel document charger en premier
+- distinguer les règles fondatrices des procédures
+- router une situation vers le bon fichier
+- exécuter une checklist ou remplir un template
+- vérifier un résultat avant de le déclarer terminé
+- retrouver le propriétaire d’une règle et les relations avec les autres playbooks
 
-Le guide définit une structure stable. Il ne fixe ni le nombre de cours, ni une progression de cours, ni un fournisseur obligatoire.
+Le guide ne transpose aucune doctrine, aucun domaine, aucune liste d’invariants et aucun exemple métier du dépôt source.
 
-## 2. Architecture recommandée du playbook final
+## 2. Structure commune du répertoire
 
-### 0. Statut, périmètre et vocabulaire
+La structure récurrente observée est :
 
-- statut du document et date de dernière révision
-- public visé et rôles concernés
-- distinction entre concept durable, contenu maintenu et Fil note daté
-- définitions des termes métiers anglais au moment de leur première utilisation
-- limites explicites : ce qui relève du cours, de la plateforme et de la publication
+```text
+<playbook>/
+├── README.md
+├── 00-canon.md
+├── 01-preflight.md
+├── 02-build-order.md
+├── <03..N>-<domain-or-axis>.md
+├── <N>-failure-modes.md
+├── <N>-operations.md
+├── <N>-bridge-to-<sibling>.md
+├── <N>-glossary.md
+├── checklists/
+│   ├── INDEX.md
+│   └── <checklist>.md
+└── templates/
+    ├── INDEX.md
+    └── <template>.md
+```
 
-### 1. Doctrine en une page
+Les numéros expriment un ordre de lecture et de routage, pas nécessairement une progression métier. Les dossiers et fichiers optionnels ne doivent être ajoutés que lorsqu’ils possèdent une fonction opératoire identifiable.
 
-- promesse pédagogique
-- principes non négociables
-- preuve de maîtrise attendue
-- règle de séparation entre contenu éditorial et projection publiée
-- règle d’escalade lorsqu’une décision manque
+## 3. README, point d’entrée machine
 
-Cette section doit servir de résumé opérationnel, pas remplacer les sections normatives.
+Le `README.md` est l’entrée du playbook. Il contient généralement :
 
-### 2. Contrat d’une unité pédagogique
+1. ce que le lecteur est en train de lire
+2. l’ordre de précédence des sources
+3. le manifeste des fichiers et l’ordre de chargement
+4. un modèle synthétique à mémoriser
+5. les règles de sortie non négociables
+6. un self-test avant déclaration de conformité
+7. les règles de sourcing et de citation
+8. les écarts assumés par rapport aux sources
+9. la discipline de terminologie
 
-Pour chaque unité, documenter au minimum :
+Le README route et résume. Il ne duplique pas le canon ni les procédures détaillées.
 
-- objectif observable
-- prérequis
-- idée unique
-- artefact produit
-- lien avec la preuve de maîtrise
-- activité ou exercice vérifiable
-- critères de réussite
-- transition vers l’étape suivante
+## 4. Canon, fondations et index
 
-Le niveau de détail varie selon le format, mais aucun format ne doit supprimer la preuve attendue.
+Le fichier `00-canon.md` porte les définitions, distinctions et invariants. Sa forme récurrente est :
 
-### 3. Formats pédagogiques
+1. définition de l’objet
+2. modèle ou couches principales
+3. lois ou invariants
+4. rôles et frontières
+5. vérification, mesure ou état
+6. cycle de vie
+7. séparation des responsabilités
+8. index court des règles citables
 
-Décrire chaque format avec le même patron :
+Le canon doit être la source propriétaire des règles fondatrices. Les autres fichiers les appliquent et les citent, sans créer de copie concurrente.
 
-1. finalité
-2. conditions d’entrée
-3. structure minimale
-4. artefact apprenant
-5. critères de réussite
-6. erreurs ou blocages fréquents
-7. relation avec les autres formats
-8. conditions d’ajout ou de retrait
+## 5. Preflight et ordre de construction
 
-Le noyau obligatoire sera celui validé dans le registre de décisions. Les formats complémentaires restent optionnels lorsqu’ils répondent à un besoin de transfert d’autonomie, à un risque spécifique ou à l’insuffisance du noyau.
+### 5.1 Preflight
 
-### 4. Conception à rebours et progression
+`01-preflight.md` diagnostique avant toute construction. Il contient habituellement :
 
-- partir de la preuve finale
-- remonter aux capacités indispensables
-- expliciter les prérequis et dépendances
-- vérifier l’absence de trous, doublons et chevauchements
-- laisser le découpage concret à chaque parcours
+- contrat de preflight
+- inventaire
+- attribution du problème ou de la demande
+- traduction dans le domaine du playbook
+- test de taille et de périmètre
+- condition d’arrêt
+- sortie ou template de preflight
 
-Aucune progression propre à un cours particulier ne doit devenir une structure universelle.
+### 5.2 Build order
 
-### 5. Code, variantes et contrats techniques
+`02-build-order.md` décrit l’installation ou la mise en œuvre depuis zéro :
 
-- code vérifié avant publication
-- interface conceptuelle commune
-- variantes Python et TypeScript alignées
-- même objectif pédagogique, même fixture, même contrat, même cas limite, mêmes critères et même difficulté
-- différences internes idiomatiques autorisées si la correspondance est explicitée
-- OpenRouter optionnel comme proxy sécurisé ; clé personnelle via proxy sécurisé
-- stub déterministe sans clé pour les validations
-- aucune clé ou secret dans le contenu
+- loi de l’ordre
+- phases nommées et séquencées
+- ce que chaque phase fait
+- ce que chaque phase ne doit pas faire
+- conditions de passage
+- définition de terminé
+- sortie de construction
+- suite après construction
 
-### 6. Évaluation et aide
+Le preflight décide si et comment commencer ; le build order prescrit l’ordre d’exécution.
 
-Décrire la chaîne de décision dans cet ordre :
+## 6. Fichiers de domaine
 
-1. contrôle déterministe du contrat observable
-2. exécutions répétées lorsque le comportement varie
-3. LLM utilisé comme conseil, sans décision autonome
-4. revue humaine pour les cas ambigus ou les choix éditoriaux réels
-5. seuil chiffré adaptable au parcours, sans changer la chaîne de décision
+Les fichiers numérotés suivants traitent chacun une capacité ou un axe unique. Leur structure typique est :
 
-Séparer les échecs de contrat, les résultats variables et les appréciations de qualité.
+1. raison d’existence du fichier
+2. définitions et distinctions utiles
+3. modèle ou mécanisme
+4. procédure d’application
+5. contrôles et limites
+6. anti-patterns ou modes d’échec
+7. artefacts à produire
+8. liens vers les fichiers propriétaires
 
-### 7. Production, statuts et revues
+Un fichier de domaine ne doit pas devenir un second README, un glossaire complet ou un dépôt d’exemples non routés.
 
-- fiches courtes avant rédaction détaillée
-- validation individuelle des éléments
-- revue pédagogique indépendante
-- revue transversale du parcours
-- revue humaine obligatoire avant publication
-- relancer le dernier contrôle après correction
-- changements touchant objectifs, évaluation, sécurité, fournisseurs ou certification réévalués pendant la production
+## 7. Failure modes et opérations
 
-Les statuts d’un contenu doivent être observables et liés à un verdict, pas à une intention.
+### 7.1 Failure modes
 
-### 8. Éditorial et expérience apprenant
+Le fichier de modes d’échec fournit un index de symptômes vers les causes et les fichiers propriétaires. Il doit distinguer :
 
-- contenu en français
-- tutoiement
-- objectifs formulés par action et résultat observable
-- prérequis annoncés avant usage
-- vocabulaire introduit avant emploi
-- une idée principale par unité
-- artefact attendu identifiable
-- solution ou diagnostic non révélé avant la tentative
-- review sans notion nouvelle
-- transitions explicites et progressives
+- symptôme observable
+- diagnostic
+- propriétaire probable
+- action de correction
+- test de récurrence ou de non-régression
 
-Les conventions typographiques détaillées ne sont incluses ici que si elles sont ratifiées comme règles de plateforme.
+### 7.2 Operations
 
-### 9. Publication et traçabilité
+Le fichier d’opérations couvre la durée de vie :
 
-La publication doit prouver :
+- cadence de contrôle
+- ownership
+- onboarding et continuité
+- croissance
+- révision
+- retrait ou retirement
+- self-test périodique
 
-- le contenu source validé
-- son verdict et sa version
-- la projection publiée correspondante
-- les tests applicables exécutés
-- le contrôle du rendu
-- l’absence de divergence non documentée entre source et projection
+Les opérations maintiennent le système ; elles ne remplacent pas le build order.
 
-La traçabilité est bidirectionnelle. Une projection ne devient jamais la source éditoriale par défaut.
+## 8. Bridge et glossary
 
-### 10. Gouvernance et évolution
+### 8.1 Bridge
 
-- propriétaire du concept durable
-- propriétaire et date de revue du contenu maintenu
-- rôle du Fil note daté comme contenu éditorial daté, non fondateur
-- procédure de proposition, arbitrage, validation et révision
-- distinction entre information de cours et invariant de plateforme
-- conservation des décisions utiles sans transformer les notes en doctrine implicite
+Un fichier `bridge-to-<sibling>.md` explique la frontière avec un autre playbook :
 
-## 3. Patron de fiche de format
+- relation entre les deux systèmes
+- crosswalk des concepts structurels
+- règle de routage
+- artefacts échangés
+- responsabilités de chaque côté
+- limites et non-recouvrement
 
-Chaque format décrit dans le playbook final devrait utiliser cette forme :
+### 8.2 Glossary
 
-### Nom du format
+Le glossaire est un index opératoire, pas un dictionnaire décoratif. Il contient :
 
-**Finalité**  
-Ce que l’apprenant doit pouvoir faire à la fin.
+- termes de référence
+- distinctions porteuses
+- synonymes interdits ou ambigus
+- namespace et identifiants de règles
+- propriétaire de chaque règle contestable
+- conventions de citation et de sourcing
 
-**Entrées**  
-Prérequis, contexte et artefacts nécessaires.
+## 9. Checklists
 
-**Déroulé**  
-Étapes de l’expérience, dans l’ordre.
+Le dossier `checklists/` possède un `INDEX.md` qui indique :
 
-**Sortie**  
-Artefact ou comportement observable.
+- la séquence d’exécution
+- la checklist applicable à chaque situation
+- le format de réponse à chaque item
+- les conditions bloquantes
+- la forme des citations
 
-**Vérification**  
-Contrôles déterministes, critères variables et revue éventuelle.
+Chaque checklist est exécutable, bornée et verdictable. Sa structure récurrente est :
 
-**Variantes**  
-Langage, fournisseur ou contexte, avec contrat de parité.
+1. préconditions
+2. questions ou contrôles ordonnés
+3. preuves attendues
+4. conditions de blocage
+5. actions de suite
+6. verdict
 
-**Passage de statut**  
-Conditions de rédaction, revue, validation et publication.
+Une checklist ne doit pas devenir une explication générale du domaine.
 
-## 4. Patron de contrôle de publication
+## 10. Templates
 
-Avant publication, le playbook final doit vérifier :
+Le dossier `templates/` possède un `INDEX.md` qui indique :
 
-- l’unité possède une fiche conforme
-- l’objectif, les prérequis et l’artefact sont explicites
-- le code a été vérifié
-- les variantes Python et TypeScript respectent le même contrat
-- les contrôles déterministes ont réussi
-- les tests applicables ont été exécutés
-- le rendu de la projection a été contrôlé
-- la revue humaine est terminée
-- la traçabilité source-projection est enregistrée
-- après toute correction, le dernier contrôle a été relancé
+- quoi copier
+- dans quel ordre
+- les règles communes à tous les templates
+- ce qui ne possède volontairement pas de template
+- la discipline des champs et des emplacements
 
-## 5. Ce que le guide exclut
+Chaque template est un artefact remplissable, avec un titre paramétré, des sections obligatoires, des champs de preuve, des états ou décisions et, lorsque nécessaire, un journal de révision.
 
-- le contenu détaillé d’un cours
-- le nombre ou l’ordre des cours
-- les anciennes progressions conservées dans `legacy/`
-- une obligation fournisseur non décidée
-- des seuils d’évaluation inventés
-- des règles éditoriales propres à un seul cours
-- des fichiers finaux de leçons, exercices, reviews ou quiz
+Les templates matérialisent les sorties des procédures ; ils ne doivent pas introduire une règle dont le propriétaire n’est pas ailleurs.
 
-## 6. Assemblage prévu du playbook final
+## 11. Propriétés transversales de forme
 
-Le playbook final sera assemblé dans cet ordre :
+Tout nouveau playbook structuré selon ce guide doit présenter :
 
-1. doctrine pédagogique validée
-2. décisions arbitrées et leurs conséquences
-3. structure et contrats du présent guide
-4. politiques opérationnelles et critères de publication
-5. annexes de référence et règles d’évolution
+- un point d’entrée unique
+- un ordre de chargement explicite
+- une source propriétaire pour chaque règle
+- des fichiers numérotés et routables
+- des procédures séparées des invariants
+- des checklists exécutables
+- des templates copiables
+- des failure modes indexés
+- des opérations dans le temps
+- un bridge vers les playbooks voisins
+- un glossaire et une carte de citations
+- un self-test avant toute déclaration de conformité
 
-Les sources canoniques restent inchangées. Le playbook final devra citer les références utilisées et signaler les éléments propres au cours 01 comme non généralisables.
+Ces propriétés sont structurelles. Elles ne prescrivent ni sujet, ni doctrine, ni contenu métier.
+
+## 12. Critères de conformité structurelle
+
+Le guide est respecté si un lecteur peut, sans connaître le domaine :
+
+1. trouver l’entrée et l’ordre de lecture
+2. localiser les invariants dans le canon
+3. lancer le preflight
+4. suivre l’ordre de construction
+5. router un problème vers un fichier de domaine ou un failure mode
+6. exécuter une checklist
+7. remplir le template correspondant
+8. identifier le propriétaire d’une règle
+9. comprendre la frontière avec un playbook voisin
+10. vérifier la cohérence du système via le self-test
+
+## 13. Exclusions
+
+Ce guide n’est pas :
+
+- une doctrine de produit ou de plateforme
+- un playbook pédagogique
+- une synthèse du contenu des playbooks IA
+- une nouvelle liste d’invariants métier
+- une progression de cours
+- une politique fournisseur
+- un registre de décisions
+
+## 14. Base d’observation
+
+La structure a été comparée dans les familles de playbooks du dossier `ia/`, notamment leurs entrées `README`, fichiers `00-canon`, `01-preflight`, `02-build-order`, fichiers de domaine, failure modes, opérations, bridges, glossaires, index de checklists et index de templates. Les noms et contenus spécifiques restent dans le dépôt source et ne sont pas recopiés ici.
 
