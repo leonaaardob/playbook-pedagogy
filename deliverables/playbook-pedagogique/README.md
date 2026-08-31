@@ -23,7 +23,7 @@ Le canon possède les règles fondatrices. Les autres fichiers les appliquent sa
 
 ## 1.1 Sources de cadrage
 
-- [Références canoniques](../references/canonical/INDEX.md)
+- [Références canoniques](../../references/canonical/INDEX.md)
 - [Proposition de doctrine pédagogique validée](../proposals/PROPOSITION-DOCTRINE-PEDAGOGIQUE-PLATEFORME.md)
 - [Guide structurel des playbooks IA](../guides/GUIDE-STRUCTURE-PLAYBOOK-IA.md)
 - [Registre des décisions pédagogiques validées](../decisions/REGISTRE-DECISIONS-PEDAGOGIQUES-PLATEFORME.md)
