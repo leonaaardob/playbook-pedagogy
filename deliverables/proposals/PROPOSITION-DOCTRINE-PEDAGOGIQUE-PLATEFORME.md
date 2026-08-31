@@ -20,6 +20,8 @@ Un constat canonique n’est pas une proposition : il est présenté comme tel e
 
 **Invariant de plateforme.** Un contenu suit une chaîne distincte de cadrage, production, vérification, revue pédagogique, puis publication explicite. Les références canoniques ne permettent pas encore de fixer un outil ou un format unique de traçabilité.
 
+**Invariant de plateforme.** La doctrine distingue le contenu maintenu, qui possède un propriétaire, un statut, une date de dernière revue et une prochaine condition de réexamen, du fil de notes daté, qui conserve les décisions, hypothèses et changements de doctrine dans l’ordre chronologique. Cette distinction rend la doctrine durable sans transformer les notes historiques en contenu publié.
+
 ### Conception et contrat minimal
 
 **Invariant de plateforme.** La conception part de la preuve de maîtrise attendue, puis remonte vers les capacités et les prérequis.
@@ -31,6 +33,12 @@ Un constat canonique n’est pas une proposition : il est présenté comme tel e
 **Invariant de plateforme.** Les fiches validées précèdent la rédaction détaillée. La validation individuelle, la revue pédagogique indépendante et la revue transversale sont des contrôles distincts.
 
 **Invariant de plateforme.** Le vérificateur constate les écarts, demande la correction et vérifie le résultat ; il ne se substitue pas au rédacteur par une réécriture par défaut.
+
+**Invariant de plateforme.** Le contenu publié doit respecter les règles éditoriales communes de clarté, continuité, action observable, prérequis explicites, progression lisible et absence de divulgation prématurée de la solution. Les conventions typographiques particulières restent locales tant qu’elles ne sont pas ratifiées au niveau plateforme.
+
+**Invariant de plateforme.** Quand un contenu est disponible en Python et TypeScript, les deux variantes portent le même contrat, les mêmes cas limites, les mêmes critères et le même niveau de difficulté. Les différences internes peuvent être idiomatiques si leur correspondance est explicite.
+
+**Invariant de plateforme.** La publication conserve une traçabilité bidirectionnelle : chaque projection publiée référence le contenu validé dont elle provient, et chaque contenu validé indique la projection, la version ou l’absence de publication correspondante. La preuve inclut le verdict de validation et l’identifiant de version, sans imposer un outil.
 
 ### Règles éditoriales
 
@@ -62,11 +70,11 @@ Un constat canonique n’est pas une proposition : il est présenté comme tel e
 
 **Constat canonique.** L’index identifie l’absence d’une politique uniforme au-delà du cours 01 lorsque le comportement dépend d’un modèle non déterministe.
 
-**Proposition à arbitrer.** Exiger une preuve observable, séparer les critères de contrat des critères de qualité variable et déclencher une revue humaine pour les cas ambigus. Aucun seuil numérique n’est proposé ici, car il n’est pas établi par les références.
+**Proposition à arbitrer.** Pour un comportement non déterministe, évaluer d’abord le contrat observable avec des contrôles déterministes (schéma, présence des champs, invariants, artefact produit), puis évaluer la qualité variable sur un échantillon documenté. Répéter les cas variables selon un protocole fixé avant l’exécution, conserver les résultats et déclarer séparément les échecs de contrat et les jugements de qualité. Une divergence entre contrôles ou un cas limite déclenche une revue humaine. Aucun seuil numérique n’est proposé ici, car il n’est pas établi par les références.
 
 **Raisonnement.** La politique protège la vérifiabilité sans inventer de métrique, de juge ou de seuil.
 
-**Alternatives.** Tests exacts uniquement ; juge modèle ; combinaison de tests, échantillonnage et revue humaine.
+**Alternatives.** Tests exacts uniquement ; juge modèle ; combinaison de contrôles déterministes, échantillonnage répété et revue humaine.
 
 **Décision attendue.** Choisir les types de preuve autorisés et les seuils applicables.
 
@@ -76,9 +84,9 @@ Un constat canonique n’est pas une proposition : il est présenté comme tel e
 
 **Constat canonique.** Le plan du cours 01 fixe OpenRouter comme voie d’inférence apprenant, tandis que son corpus conserve des variantes de SDK Anthropic, OpenAI et OpenRouter. L’index demande de formaliser cette règle sans la deviner.
 
-**Proposition à arbitrer.** Définir un contrat conceptuel commun ; traiter le fournisseur et le SDK comme des variantes déclarées seulement si l’objectif, les entrées, sorties, cas limites et niveau de difficulté restent équivalents. OpenRouter n’est pas déclaré invariant de plateforme à ce stade.
+**Proposition à arbitrer.** Définir un contrat conceptuel commun et faire d’OpenRouter la voie d’inférence de référence candidate pour les apprenants, sans l’imposer encore comme invariant. Chaque variante fournisseur ou SDK doit déclarer son fournisseur, modèle, mode d’appel, variables de configuration, limites connues et éventuelles différences de comportement. Elle n’est acceptable que si l’objectif, les entrées, sorties, cas limites, niveau de difficulté et critères de validation restent équivalents. Les exemples doivent utiliser une interface commune ; le routage ne doit pas modifier le contrat pédagogique. Une variante non équivalente doit être présentée comme un parcours distinct, pas comme une simple substitution. Les secrets et clés ne sont jamais inclus dans le contenu.
 
-**Raisonnement.** Cette politique conserve la compatibilité avec le cas documenté tout en évitant de promouvoir un choix du cours 01 au niveau global.
+**Raisonnement.** Cette politique rend explicite la voie OpenRouter documentée, protège la parité entre variantes et évite de promouvoir automatiquement un choix du cours 01 au niveau global.
 
 **Alternatives.** OpenRouter unique ; SDK libre ; une voie canonique avec variantes documentées ; une politique différente par cours.
 
@@ -117,4 +125,3 @@ Toutes les autres informations de cette note sont soit des invariants explicitem
 - `references/canonical/les-primitives/learning-content/course-01/work/reference/GABARIT-FICHE-LECON.md`
 - `references/canonical/les-primitives/learning-content/course-01/work/reference/PROCESSUS-PRODUCTION-ET-REVUE.md`
 - `references/canonical/les-primitives/learning-content/course-01/outputs/plan-cours-1-agentic-engineering.md`, utilisé comme cas d’application du cours 01
-
