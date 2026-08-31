@@ -20,7 +20,7 @@ Un constat canonique n’est pas une proposition : il est présenté comme tel e
 
 **Invariant de plateforme.** Un contenu suit une chaîne distincte de cadrage, production, vérification, revue pédagogique, puis publication explicite. Les références canoniques ne permettent pas encore de fixer un outil ou un format unique de traçabilité.
 
-**Invariant de plateforme.** La doctrine distingue le contenu maintenu, qui possède un propriétaire, un statut, une date de dernière revue et une prochaine condition de réexamen, du fil de notes daté, qui conserve les décisions, hypothèses et changements de doctrine dans l’ordre chronologique. Cette distinction rend la doctrine durable sans transformer les notes historiques en contenu publié.
+**Invariant de plateforme.** La doctrine distingue trois régimes de contenu : le **contenu de travail**, modifiable et non publiable tant qu’il n’a pas franchi les gates ; le **contenu maintenu**, validé et publié, qui possède un propriétaire, un statut, une date de dernière revue et une prochaine condition de réexamen ; et le **fil de notes daté**, qui conserve décisions, hypothèses et changements de doctrine dans l’ordre chronologique sans devenir du contenu apprenant. Aucun régime ne peut être promu implicitement dans un autre.
 
 ### Conception et contrat minimal
 
@@ -38,11 +38,15 @@ Un constat canonique n’est pas une proposition : il est présenté comme tel e
 
 **Invariant de plateforme.** Quand un contenu est disponible en Python et TypeScript, les deux variantes portent le même contrat, les mêmes cas limites, les mêmes critères et le même niveau de difficulté. Les différences internes peuvent être idiomatiques si leur correspondance est explicite.
 
-**Invariant de plateforme.** La publication conserve une traçabilité bidirectionnelle : chaque projection publiée référence le contenu validé dont elle provient, et chaque contenu validé indique la projection, la version ou l’absence de publication correspondante. La preuve inclut le verdict de validation et l’identifiant de version, sans imposer un outil.
+**Invariant de plateforme.** La parité inclut les noms de champs échangés, les entrées et sorties attendues, les erreurs observables, les exemples de vérification et l’artefact produit. Une prévisualisation peut montrer un seul langage, mais la version correspondant au choix de l’apprenant doit exister avant publication.
+
+**Invariant de plateforme.** La publication conserve une traçabilité bidirectionnelle : chaque projection publiée référence le contenu validé dont elle provient, et chaque contenu validé indique la projection, la version ou l’absence de publication correspondante. La preuve inclut le verdict de validation, l’identifiant de version, le résultat des tests applicables et le contrôle du rendu de la projection, sans imposer un outil.
 
 ### Règles éditoriales
 
-**Information propre au cours 01, non généralisable.** Les conventions détaillées de rédaction publiées dans le processus du cours 01 (ponctuation, interdiction de certains signes, forme des puces, formulation des objectifs et ordre de clôture des leçons) sont des règles du corpus de ce cours. Elles ne sont pas promues comme invariants de plateforme dans cette proposition.
+**Invariant de plateforme.** Les contenus publiés doivent employer un vocabulaire introduit avant son usage, formuler les objectifs comme des actions et résultats observables, expliciter les prérequis, préserver une idée principale par fiche, nommer l’artefact produit, distinguer l’étape courante de la suite et ne pas révéler la solution avant la tentative. Une review consolide sans introduire de notion nouvelle ; les exercices et transitions doivent prolonger la leçon précédente.
+
+**Information propre au cours 01, non généralisable.** Les conventions typographiques particulières du processus du cours 01 (ponctuation, signes interdits et forme exacte des puces) restent locales tant qu’elles ne sont pas ratifiées comme standard de plateforme.
 
 ### Gouvernance de production
 
@@ -84,9 +88,9 @@ Un constat canonique n’est pas une proposition : il est présenté comme tel e
 
 **Constat canonique.** Le plan du cours 01 fixe OpenRouter comme voie d’inférence apprenant, tandis que son corpus conserve des variantes de SDK Anthropic, OpenAI et OpenRouter. L’index demande de formaliser cette règle sans la deviner.
 
-**Proposition à arbitrer.** Définir un contrat conceptuel commun et faire d’OpenRouter la voie d’inférence de référence candidate pour les apprenants, sans l’imposer encore comme invariant. Chaque variante fournisseur ou SDK doit déclarer son fournisseur, modèle, mode d’appel, variables de configuration, limites connues et éventuelles différences de comportement. Elle n’est acceptable que si l’objectif, les entrées, sorties, cas limites, niveau de difficulté et critères de validation restent équivalents. Les exemples doivent utiliser une interface commune ; le routage ne doit pas modifier le contrat pédagogique. Une variante non équivalente doit être présentée comme un parcours distinct, pas comme une simple substitution. Les secrets et clés ne sont jamais inclus dans le contenu.
+**Proposition à arbitrer.** Classer OpenRouter comme proxy sécurisé de référence pour l’inférence apprenant, et non comme modèle ou fournisseur pédagogique. Le proxy centralise le point d’accès, le routage et la gestion des secrets ; le contenu ne contient jamais de clé et ne dépend pas d’un fournisseur concret. Chaque variante fournisseur ou SDK doit déclarer son fournisseur, modèle, mode d’appel, variables de configuration, limites connues et éventuelles différences de comportement. Elle n’est acceptable que si l’objectif, les entrées, sorties, cas limites, niveau de difficulté et critères de validation restent équivalents. Les exemples utilisent une interface commune ; le routage ne modifie pas le contrat pédagogique. Une variante non équivalente est un parcours distinct, pas une substitution. La politique ne préjuge pas encore de l’obligation d’utiliser ce proxy dans tous les cours.
 
-**Raisonnement.** Cette politique rend explicite la voie OpenRouter documentée, protège la parité entre variantes et évite de promouvoir automatiquement un choix du cours 01 au niveau global.
+**Raisonnement.** Cette politique rend explicite le rôle de proxy sécurisé documenté, protège la séparation entre interface pédagogique et fournisseur, et évite de promouvoir automatiquement le choix du cours 01 en obligation universelle.
 
 **Alternatives.** OpenRouter unique ; SDK libre ; une voie canonique avec variantes documentées ; une politique différente par cours.
 
