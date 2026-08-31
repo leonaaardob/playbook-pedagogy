@@ -21,13 +21,22 @@ Ce playbook définit la manière de concevoir, produire, vérifier, maintenir et
 
 Le canon possède les règles fondatrices. Les autres fichiers les appliquent sans créer de source concurrente.
 
+## 1.1 Sources de cadrage
+
+- [Références canoniques](../references/canonical/INDEX.md)
+- [Proposition de doctrine pédagogique validée](../proposals/PROPOSITION-DOCTRINE-PEDAGOGIQUE-PLATEFORME.md)
+- [Guide structurel des playbooks IA](../guides/GUIDE-STRUCTURE-PLAYBOOK-IA.md)
+- [Registre des décisions pédagogiques validées](../decisions/REGISTRE-DECISIONS-PEDAGOGIQUES-PLATEFORME.md)
+
+Ces sources sont complémentaires : les références établissent le contexte canonique, la proposition formalise la doctrine, le registre clôt les arbitrages et le guide fournit la structure documentaire. `legacy/` est exclu.
+
 ## 1.1 Précédence des sources
 
 1. le registre de décisions validées pour les arbitrages de plateforme
 2. le concept durable et le présent playbook pour les règles consolidées
 3. les références canoniques pour les frontières et processus explicitement établis
 4. les documents propres à un cours pour leur application locale
-5. les Fil note daté pour leur contexte éditorial daté
+5. les fil note daté pour leur contexte éditorial daté
 
 `legacy/` est explicitement exclu des sources de vérité et ne sert pas à produire, arbitrer ou valider le contenu du playbook.
 

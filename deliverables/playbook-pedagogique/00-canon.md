@@ -8,7 +8,7 @@ La plateforme sépare l’atelier éditorial, le contenu validé et la projectio
 
 - **concept durable** : principes et contrats stables, destinés à survivre aux cycles
 - **contenu maintenu** : contenu validé et publié, avec propriétaire, statut, date de revue et condition de réexamen
-- **Fil note daté** : contenu éditorial daté, non fondateur, et non journal chronologique de doctrine
+- **fil note daté** : contenu éditorial daté, non fondateur, et non journal chronologique de doctrine
 
 Aucun régime ne se promeut implicitement dans un autre.
 
@@ -19,7 +19,7 @@ Aucun régime ne se promeut implicitement dans un autre.
 - le noyau obligatoire comprend micro-leçons, pratique guidée, évaluation vérifiable et review de consolidation
 - les contrôles déterministes sont éliminatoires
 - le juge LLM est consultatif et ne décide jamais seul
-- la revue humaine requise précède la publication
+- la revue humaine requise précède la publication lorsque le périmètre l’exige
 - une correction impose de relancer le dernier contrôle applicable
 - la doctrine est agnostique des fournisseurs et repose sur un contrat conceptuel commun
 - les validations utilisent un stub déterministe sans clé
